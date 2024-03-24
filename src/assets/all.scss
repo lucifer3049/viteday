@@ -1,8 +1,14 @@
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "./helpers/variables";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './helpers/variables';
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+@import '../assets/forward/navbar.scss';
+@import '../assets/forward/leftnavbar.scss';
+@import '../assets/forward/cart.scss';
 
-
-
-
+html,
+body {
+  background-color: #fff7ec;
+  max-height: 100vh;
+  min-width: 100vw;
+}
