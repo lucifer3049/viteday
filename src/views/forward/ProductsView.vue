@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <LoadingPlugin :active="isLoading"></LoadingPlugin>
-            <div class="col-md-4" v-for="item in products" :key="item">
+            <div class="col-md-4 mt-4" v-for="item in products" :key="item">
                 <div class="card" style="width: 18rem;">
                     <img :src="item.imageUrl" class="card-img-top" :alt="item.category">
                     <div class="card-body">
@@ -11,7 +11,8 @@
                         <p class="text-end">$NT{{ item.origin_price }}</p>
                         <router-link type="button" class="btn btn-outline-primary"
                             :to="`/product/${item.id}`">產品資訊</router-link>
-                        <button type="button" class="btn btn-outline-success" @click="addTotheCart(item.id)">加入購車</button>
+                        <button type="button" class="btn btn-outline-success"
+                            @click="addTotheCart(item.id)">加入購車</button>
                     </div>
                 </div>
             </div>
@@ -21,7 +22,7 @@
     </div>
 </template>
 
-<script >
+<script>
 import { mapActions } from 'pinia';
 import { useToastMessageStore } from '@/stores/toastMessage';
 import { RouterLink } from 'vue-router';
@@ -60,6 +61,7 @@ export default {
                         style: 'success',
                         title: '成功取的產品資訊',
                     })
+
                 })
                 .catch((err) => {
                     this.$httpMessageState(err.response, '錯誤訊息');

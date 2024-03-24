@@ -3,16 +3,16 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: '前台導覽頁面',
+    name: '前台頁面',
     component: () => import('@/views/ForwardView.vue'),
     children: [
+      // {
+      //   path: '',
+      //   name: '首頁',
+      //   component: () => import('@/views/IndexView.vue')
+      // },
       {
         path: '',
-        name: '首頁',
-        component: () => import('@/views/IndexView.vue')
-      },
-      {
-        path: '/product',
         name: '產品列表',
         component: () => import('@/views/forward/ProductsView.vue')
       },

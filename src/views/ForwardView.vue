@@ -1,32 +1,25 @@
 <template>
-    <!-- 前台頁面 -->
-    <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <router-link class="navbar-brand" to="/">首頁</router-link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" to="/product">產品列表</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link to="/cart" class="nav-link"><i class="bi bi-cart-plus"></i>購物車</router-link>
-                        </li>
-                        <li class="nav-item">
-                             <router-link to="/admin/products" class="nav-link"><i class="bi bi-person-circle"></i>後臺管理</router-link>
-                        </li>
-                    </ul>
-                </div>
+    <Navbar></Navbar>
+    <div class="container">
+        <!-- <div class="row"> -->
+            <div class="col-md-3">
+                <!-- <LeftNavbar></LeftNavbar> -->
             </div>
-        </nav>
-        <router-view></router-view>
+            <div class="col-md-9">
+                <router-view></router-view>
+            </div>
+        <!-- </div> -->
     </div>
 </template>
 
 <script>
+import Navbar from '@/components/NavbarForward.vue'
+// import LeftNavbar from '@/components/LeftNavbar.vue'
 
+export default {
+    components: {
+        Navbar,
+        // LeftNavbar
+    }
+}
 </script>

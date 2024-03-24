@@ -16,7 +16,6 @@
                                 <button type="button" class="btn btn-outline-success float-end"
                                     @click="addTotheCart(product.id)">加入購物車</button>
                             </p>
-
                         </div>
                     </div>
                 </div>

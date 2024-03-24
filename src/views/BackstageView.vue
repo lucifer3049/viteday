@@ -3,30 +3,31 @@
     <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <router-link class="navbar-brand" to="/">首頁</router-link>
+                <router-link class="navbar-brand" to="/"><img class="img-icon" src="../assets/imag/首頁icon3.png"
+                        alt=""></router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" to="/admin/products">後台產品列表</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link to="/cart" class="nav-link"><i class="bi bi-cart-plus"></i>購物車</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link to="/admin/coupon" class="nav-link">優惠卷</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link to="/admin/orders" class="nav-link">訂單列表</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" @click.prevent="signout">登出</a>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <router-link class="nav-link" aria-current="page" to="/admin/products">後台產品列表</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/cart" class="nav-link"><i class="bi bi-cart-plus"></i>購物車</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/admin/coupon" class="nav-link">優惠卷</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/admin/orders" class="nav-link">訂單列表</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" @click.prevent="signout">登出</a>
+                    </li>
+                </ul>
             </div>
         </nav>
         <ToastMessages />
